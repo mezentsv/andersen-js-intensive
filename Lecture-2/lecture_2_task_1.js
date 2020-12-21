@@ -8,5 +8,5 @@ const deepClone = (inputObj) => {
 	for (key in inputObj) {
   		outputObj[key] = deepClone(inputObj[key]);
 	}
-	return outpuObj;
+	return outputObj;
 }
