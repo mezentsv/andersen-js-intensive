@@ -1,0 +1,10 @@
+const createDebounceFunction = (refFunc, delay) => {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+      timeout = null;
+      refFunc(...args);
+    }, delay);
+  };
+};
