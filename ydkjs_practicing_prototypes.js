@@ -25,28 +25,27 @@ var reel = {
 };
 
 var slotMachine = {
-  reels: [
-    // this slot machine needs 3 separate reels
-    // hint: Object.create(..)
-  ],
+  reels: [Object.create(reel), Object.create(reel), Object.create(reel)],
   spin() {
-    this.reels.forEach(function spinReel(reel) {
-      reel.spin();
-    });
+    this.reels.forEach((reel) => reel.spin());
   },
   display() {
-    // TODO
+    let rows = [];
+    for (let col = 0; col < 3; col++) {
+      let row = this.reels.map((reel) => {
+        let newReel = Object.create(reel);
+        newReel.position =
+          (reel.position + col + randMax(55)) % reel.symbols.length;
+        return newReel.display();
+      });
+      rows.push(row.join(" | "));
+    }
+    console.log(rows.join("\n"));
   },
 };
 
 slotMachine.spin();
 slotMachine.display();
-// ☾ | ☀ | ★
-// ☀ | ♠ | ☾
-// ♠ | ♥ | ☀
 
 slotMachine.spin();
 slotMachine.display();
-// ♦ | ♠ | ♣
-// ♣ | ♥ | ☺
-// ☺ | ♦ | ★
