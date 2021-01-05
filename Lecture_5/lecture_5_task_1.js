@@ -5,7 +5,7 @@ const multiply = (num1, num2) => {
     !isFinite(num1) ||
     typeof num2 !== "number" ||
     isNaN(num2) ||
-    !isFinite(num1)
+    !isFinite(num2)
   ) {
     throw new Error("Enter valid number");
   }
@@ -18,5 +18,5 @@ const multiplyBy10 = (num2) => {
   return multiply(num1, num2);
 };
 
-module.exports = multiply;
-module.exports = multiplyBy10;
+module.exports.multiply = multiply;
+module.exports.multiplyBy10 = multiplyBy10;
