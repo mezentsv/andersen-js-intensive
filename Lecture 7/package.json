@@ -1,0 +1,16 @@
+{
+  "name": "check",
+  "version": "1.0.0",
+  "description": "",
+  "main": "task1.js",
+  "scripts": {
+    "test-1": "mocha test-1",
+    "test-2": "mocha test-2"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^8.2.1"
+  }
+}
