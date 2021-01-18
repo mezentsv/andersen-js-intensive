@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HW: Task 8</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <form class="form">
+        <h2>Anyform</h2>
+        <div class="form-container">
+          <label for="length">Width:</label>
+          <input
+            type="number"
+            placeholder="width..."
+            name="width"
+            id="width"
+            class="form-input"
+            min="50"
+            max="1000"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="height">Height:</label>
+          <input
+            type="number"
+            placeholder="height..."
+            name="height"
+            id="height"
+            class="form-input"
+            min="50"
+            max="600"
+            required
+          />
+        </div>
+        <div class="form-container">
+          <label for="color">Color:</label>
+          <input
+            type="color"
+            name="color"
+            id="color"
+            class="form-input"
+            required
+          />
+        </div>
+        <div class="form-container text-fields-container">
+          <p>Text goes here:</p>
+          <div class="text-field-wrapper">
+            <textarea
+              name="text-field"
+              class="text-field"
+              placeholder="Type here..."
+              required
+            ></textarea>
+            <div class="add-button" id="add-btn">+</div>
+          </div>
+        </div>
+        <button id="create">CREATE</button>
+      </form>
+
+      <div class="generated-wrap"></div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
